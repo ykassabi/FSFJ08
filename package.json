@@ -1,0 +1,28 @@
+{
+  "name": "fsjs_08",
+  "version": "1.0.0",
+  "description": "book CRUD project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YKassabi/FSFJ08.git"
+  },
+  "keywords": [
+    "CRUD",
+    "NodeJs",
+    "mySQL"
+  ],
+  "author": "YKASSABI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YKassabi/FSFJ08/issues"
+  },
+  "homepage": "https://github.com/YKassabi/FSFJ08#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

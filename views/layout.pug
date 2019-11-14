@@ -3,5 +3,16 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
   body
+    #container
+      h1= title
+      nav
+        a.button(href='/')
+          i.fa.fa-home.fa-border.botton  ALL 
+        ||
+        a.button(href='/books/new')
+          i.fa.fa-file-text.fa-border.botton  NEW     
+
     block content
+

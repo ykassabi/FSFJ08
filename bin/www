@@ -7,12 +7,13 @@
 var app = require('../app');
 var debug = require('debug')('fsfj08:server');
 var http = require('http');
+var sequelize = require('../models').sequelize; // import Sequelize
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3014');
+var port = normalizePort(process.env.PORT || '3017');
 app.set('port', port);
 
 /**
@@ -25,9 +26,20 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+sequelize.sync().then(() => {
+  server.listen(port);
+});
 server.on('error', onError);
 server.on('listening', onListening);
+
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+// server.listen(port);
+// server.on('error', onError);
+// server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.

@@ -1,6 +1,10 @@
 body {
   padding: 10px 50px 50px;
   font: 18px "Garamond", serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(21, 21, 48, 0.7)),
+              url("../images/LLibrary.jpg");
+              /* url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Beautiful-Library-Wallpaper.jpg"); */
+  background-size: cover;
 }
 
 a {
@@ -76,6 +80,8 @@ label {
   min-width: 130px;
   display: inline-block;
   transition: 0.4s;
+  background-color: aliceblue;
+  border-radius: .5rem;
 }
 
 input {
@@ -85,6 +91,7 @@ input {
   border-radius: 2px;
   border-color: #E7E7E7;
   transition: 0.4s;
+  border-radius: .5rem;
 }
 
 input[type=text] {
@@ -94,5 +101,31 @@ input[type=text] {
 
 .error {
   color: rgb(236, 15, 15);
+}
+/* /////////////////// */
+/* Custom design */
+/* /////////////////// */
+#container{
+  border-bottom: #019875 1px dashed;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-image: linear-gradient(180deg, rgba(124, 120, 95, 0.74) 70%, rgba(23, 43, 61, 0.507) 100%);
+  border-radius: 1rem;
+}
+.books{
+  margin: 0 auto;
+  border-bottom: #019875 1px dashed;
+  /* text-align: center; */
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+}
+nav{
+  margin: 0 auto;
+}
+.formBook{
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding: 10px 0;
 }
 

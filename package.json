@@ -1,28 +1,22 @@
 {
-  "name": "fsjs_08",
-  "version": "1.0.0",
-  "description": "book CRUD project",
-  "main": "index.js",
+  "name": "fsfj08",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YKassabi/FSFJ08.git"
-  },
-  "keywords": [
-    "CRUD",
-    "NodeJs",
-    "mySQL"
-  ],
-  "author": "YKASSABI",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/YKassabi/FSFJ08/issues"
-  },
-  "homepage": "https://github.com/YKassabi/FSFJ08#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "^1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.19.4",
+    "pug": "2.0.0-beta11",
+    "sequelize": "^5.21.2",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
   }
 }

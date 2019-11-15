@@ -101,6 +101,15 @@ input[type=text] {
 
 .error {
   color: rgb(236, 15, 15);
+  background: rgba(147, 216, 173, 0.835);
+  border-radius: 2rem;
+  letter-spacing: .1rem;
+  list-style-type: none;
+  padding-left: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  width: 20%;
+  border-bottom:2px red solid ;
 }
 /* /////////////////// */
 /* Custom design */

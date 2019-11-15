@@ -5,16 +5,29 @@ const Sequelize = require('sequelize');
 module.exports = (sequelize) => {
     class Book extends Sequelize.Model {}
     Book.init({
-        title: {
+            title: {
                 type: Sequelize.STRING,
-                validate: { notEmpty: { msg: 'oops! no empty title is permetied' } }
+                validate: {
+                    notEmpty: {
+                        msg: 'The TITLE is required'
+                    }
+                }
             },
             author: {
                 type: Sequelize.STRING,
-                validate: { notEmpty: { msg: 'oops! no empty title is permetied' } }
+                validate: {
+                    notEmpty: {
+                        msg: 'The AUTHOR is required'
+                    }
+                }
             },
-            genre: Sequelize.STRING,
-            year: Sequelize.INTEGER
+            genre: {
+                type: Sequelize.STRING
+            },
+            year: {
+                type: Sequelize.INTEGER
+                }
+            
     }, {sequelize});
 
     return Book;

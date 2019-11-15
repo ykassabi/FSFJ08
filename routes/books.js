@@ -104,7 +104,7 @@ router.post('/:id/edit', asyncHandler(async (req, res) => {
       book.id = req.params.id; // make sure correct book gets updated
       res.render("books/edit", {//should render tamplate of the book edit
         book, // passing information data about the book
-        errors: error.errors, // passing error data
+        error, // passing error data
         title: "Editing Book"
       })
     } else {

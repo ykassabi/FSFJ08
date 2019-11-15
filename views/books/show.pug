@@ -1,25 +1,27 @@
 extends ../layout
 
 block content
-    
-    h5 Title
-    h4= book.title
-
-    h5 Author
-    h4= book.author
-
-    h5 Genre
-    h4= book.genre
-
-    h5 First Published in:
-    h4= book.year
 
 
-    
-    p
-    a(href="/books/" + book.id + "/edit") Edit Article 
+    .formBook
+        .field_title
+            p Title
+            p= book.title
 
-    p
+        .field_title
+            p Author
+            p= book.author
+
+        .field_title
+            p Genre
+            p= book.genre
+
+        .field_title
+            p First Published in:
+            p= book.year
+
+        a.button(href="/books/" + book.id + "/edit") Edit Article 
         form(action="/books/" + book.id + "/delete", method="post")
+        p
             input(type='submit', value='Delete Book')
 

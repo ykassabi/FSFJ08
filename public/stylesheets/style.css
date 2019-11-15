@@ -2,7 +2,7 @@ body {
   padding: 10px 50px 50px;
   font: 18px "Garamond", serif;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(21, 21, 48, 0.7)),
-              url("../images/LLibrary.jpg");
+              url("../images/Library.jpg");
               /* url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Beautiful-Library-Wallpaper.jpg"); */
   background-size: cover;
 }
@@ -70,6 +70,9 @@ tr {
 tr:nth-child(2n) {
   background: #E7E7E7;
 }
+tr:nth-child(2n+1) {
+  background: rgba(0, 225, 241, 0.3);
+}
 
 td {
   padding: 5px 20px 5px 10px;
@@ -101,7 +104,7 @@ input[type=text] {
 
 .error {
   color: rgb(236, 15, 15);
-  background: rgba(147, 216, 173, 0.835);
+  background: rgba(147, 216, 173, 0.735);
   border-radius: 2rem;
   letter-spacing: .1rem;
   list-style-type: none;
@@ -121,6 +124,9 @@ input[type=text] {
   background-image: linear-gradient(180deg, rgba(124, 120, 95, 0.74) 70%, rgba(23, 43, 61, 0.507) 100%);
   border-radius: 1rem;
 }
+#container + h2{
+background: rgba(147, 216, 173, 0.735);
+}
 .books{
   margin: 0 auto;
   border-bottom: #019875 1px dashed;
@@ -136,5 +142,17 @@ nav{
   background: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 10px 0;
+}
+
+.field_title>p{
+  color: rgb(6, 26, 7);
+ background: #E7E7E7;
+ width: 30%;
+ font-weight: lighter;
+}
+.field_title> p:nth-child(2n) {
+ background: rgb(117, 17, 17);
+ width: 30%;
+ font-size: 2rem;;
 }
 

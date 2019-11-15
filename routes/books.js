@@ -60,7 +60,7 @@ router.get("/:id", asyncHandler(async (req, res) => {
     try {
       book = await Book.findByPk(req.params.id);
       if(book){
-      res.render("books/show", { book, title: book.title });
+        res.render("books/show", { book, title: book.title });
       }else{
         res.render("page_not_found", {
           book: {},
@@ -68,20 +68,9 @@ router.get("/:id", asyncHandler(async (req, res) => {
         });
       }
     } catch (error) {
-      //throw  404
       throw error
     }
-      const book = await Book.findByPk(req.params.id);
-  if (book) {
-    res.render('books/update-book', { book, title: 'Update Book' });
-  } else {
-      res.status(404).render('error', {
-        message: 'Page not found',
-        error: {
-          status: 404,
-          stack: 'The book you were looking for does not exist :('
-        }
-      })
+
 }));
 
 ////////////////////////
@@ -96,34 +85,33 @@ router.get("/:id/edit", asyncHandler(async (req, res) => {
 
 /* Update an Book. */
 router.post('/:id/edit', asyncHandler(async (req, res) => {
-  let book;
+  let book;//defining a book
   try {
-    book = await Book.findByPk(req.params.id);
-    if (book){
-      await book.update(req.body)
-      res.redirect("/Books/" + book.id);
+    book = await Book.findByPk(req.params.id);//looking for the book
+    if (book){ //found the book
+      await book.update(req.body)//performing the update
+      res.redirect("/books/" + book.id);//redirecting to show this book, that it has been just updated
     } 
-    else {
-          res.render("page_not_found", {
+    else {//failed to find the book 
+          res.render("page_not_found", {// render the 404 
             book: {},
             title: "Page Not Found"
           });
         }
   } catch (error) {
-    if (error.name === "SequelizeValidationError") {
-          book = await Book.build(req.body);
-          book.id = req.params.id; 
-          res.render("books/" + req.params.id, { // suppost to redirect to books/:id
-            book,
-            error,
-            title: "Edit book 📝"
-          });
-        } else {
-          throw error;
-      }
-  } 
-  
-}));
+    if (error.name === "SequelizeValidationError") { //if the error is validation error
+      book = await Book.build(req.body);//
+      article.id = req.params.id; // make sure correct article gets updated
+      res.render("books/edit", {//should render tamplate of the book edit
+        book, // passing information data about the book
+        errors: error.errors, // passing error data
+        title: "Editing Book"
+      })
+    } else {
+      throw error;
+    }
+  }
+}))
 
 ///////////////////////////
 /* Delete Book form. */

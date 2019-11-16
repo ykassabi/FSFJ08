@@ -21,7 +21,7 @@ block content
             p= book.year
 
         a.button(href="/books/" + book.id + "/edit") Edit Article 
-        form(action="/books/" + book.id + "/delete", method="post")
-        p
-            input(type='submit', value='Delete Book')
+        
+    form(action="/books/" + book.id + "/delete", method="post")
+        input(type='submit', value='Delete Book')
 

@@ -62,9 +62,9 @@ router.get("/:id", asyncHandler(async (req, res) => {
       if(book){
         res.render("books/show", { book, title: book.title });
       }else{
-        res.render("page_not_found", {
+        res.render("error", {
           book: {},
-          title: "Book not found"
+          title: "Book not found :/"
         });
       }
     } catch (error) {
